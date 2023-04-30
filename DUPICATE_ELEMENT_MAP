@@ -1,0 +1,22 @@
+      unordered_map<int,int>m;
+        vector<int> v;
+        int i=0;
+        for(int i=0;i<arr.size();i++){
+            
+            m[arr[i]]=m[arr[i]]+1;
+        }
+        for(auto value:m){
+            if(value.second>=2){
+                v.push_back(value.first);
+            }
+        }
+        sort(v.begin(),v.end());
+         if(v.size()==0){
+            cout<<"-1"<<endl;
+        }
+        else{
+            for(auto it :v){
+                cout<<it<<" ";
+            }
+            cout<<endl;
+        }
