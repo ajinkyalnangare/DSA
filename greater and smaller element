@@ -1,0 +1,42 @@
+class Geeks {
+  public:
+  static void greaterKSorted(vector<int>&arr, int k) {
+      
+      set<long long>s;
+      int flag=0;
+      for(int i=0;i<arr.size();i++){
+          if(arr[i]>=k){
+              s.insert(arr[i]);
+              flag=1;
+          }
+        
+      }
+      if(flag==0){
+          s.insert(-1);
+      }
+      for(auto it:s){
+          cout<<it<<" ";
+      }
+      
+      
+  }
+  static void smallerKSorted(vector<int>&arr, int k) {
+      set<long long>l;
+        int flag=0;
+      for(int i=0;i<arr.size();i++){
+          if(arr[i]<k){
+              l.insert(arr[i]);
+                  flag=1;
+          }
+       
+      }
+      
+        if(flag==0){
+          l.insert(-1);
+      }
+      for(auto it:l){
+          cout<<it<<" ";
+      }
+      
+  }
+};
