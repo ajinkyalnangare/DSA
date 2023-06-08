@@ -1,0 +1,27 @@
+class Solution
+{
+    public:
+    //Function to check if brackets are balanced or not.
+    bool ispar(string x)
+    {
+        unordered_map<char,int> mp = {{'(',-1},{'[',-2},{'{',-3},{')',1},{']',2},{'}',3}};
+        stack<char>st;
+        for(auto it:x){
+            if(mp[it]<0){
+                st.push(it);
+            }
+            else{
+                if(st.empty()) return false;
+                char top=st.top();
+                st.pop();
+                if(mp[top]+mp[it]!=0) return false;
+            }
+        }
+       
+        if(st.empty()){
+            return true;
+        }
+        return false;
+    }
+
+};
