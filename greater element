@@ -1,0 +1,25 @@
+
+class Solution{
+    public:
+    int closest3Sum(int A[], int n, int x)
+    {
+        sort(A,A+n);
+        int result=0; int diff=INT_MAX;
+        for(int i=0;i<n-2;i++){
+            int start=i+1;
+            int end=n-1;
+            while(start<end){
+                int sum=A[i]+A[start]+A[end];
+                if(sum==x) return x;
+                else if(sum<x) start++;
+                else end--;
+                if(abs(x-sum)<diff){
+                    diff=abs(x-sum);
+                    result=sum;
+                }
+                
+            }
+        }
+        return result;
+    }
+};
