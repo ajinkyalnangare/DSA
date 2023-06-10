@@ -1,0 +1,13 @@
+       char *str;
+    stack<char> st;
+    for(int i=0;i<len;i++){
+        st.push(S[i]);
+    }
+    for(int i=0;i<len;i++){
+        if(!st.empty()){
+        S[i]=st.top();
+        st.pop();
+        }
+    }
+    
+    return S;
