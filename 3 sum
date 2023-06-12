@@ -4,7 +4,7 @@ class Solution{
     bool findTriplets(int a[], int n)
     { 
         sort(a,a+n);
-  
+  //int a
         for( int i=0;i<n-2;i++){
                  
             if(towsum(a,-a[i],i+1,n)){
