@@ -1,6 +1,6 @@
 class Solution{
   public:
-    //Function to find triplets with zero sum.
+
     bool findTriplets(int a[], int n)
     { 
         sort(a,a+n);
